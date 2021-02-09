@@ -1,0 +1,17 @@
+.main-block {
+  &--wrapper {
+    width: 66%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: $max-tablet-width) {
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+}

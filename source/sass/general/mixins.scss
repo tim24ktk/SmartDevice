@@ -1,0 +1,24 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset_for_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin size ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+///миксин сброса стилей для кнопок
+@mixin btn-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}

@@ -1,0 +1,30 @@
+.main-header {
+  padding-bottom: 240px;
+  background-image: url("../img/bike-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: $basic-black;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bike-desktop@2x.png");
+  }
+
+  @media (max-width: $max-tablet-width) {
+    padding-bottom: 0;
+    background-image: url("../img/bike-tablet@1x.png");
+    background-size: 100% 50%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-tablet@2x.png");
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    background-image: url("../img/bike-mobile@1x.png");
+    background-size: 100% 53%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bike-mobile@2x.png");
+    }
+  }
+}

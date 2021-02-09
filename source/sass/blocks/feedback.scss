@@ -1,0 +1,143 @@
+.feedback {
+  margin-top: 247px;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 80px;
+    width: 100%;
+    align-self: center;
+    align-items: center;
+    background-color: $basic-white;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 70px;
+  }
+}
+
+.feedback__prompt {
+  @include reset;
+  margin-left: 67px;
+  width: 327px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: $basic-white;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 70px;
+    margin-left: 0;
+    width: 321px;
+    font-size: 18px;
+    color: $basic-black;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 288px;
+  }
+}
+
+.feedback__form {
+  margin-top: 21px;
+  margin-left: 66px;
+  width: 327px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 30px;
+    margin-left: 2px;
+    width: 324px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 320px;
+  }
+}
+
+.feedback__form input {
+  margin-bottom: 20px;
+  padding: 5px;
+  padding-left: 29px;
+  height: 48px;
+  line-height: 52px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  &::placeholder {
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 39px;
+    color: $placeholder-color;
+    opacity: 0.5;
+
+    @media (max-width: $max-tablet-width) {
+      line-height: 35px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      line-height: 38px;
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    padding-left: 21px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 288px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-left: 25px;
+  }
+}
+
+.feedback__form input[type="tel"] {
+  border-radius: 6px;
+}
+
+.feedback__form button {
+  @include btn-reset;
+  padding: 15px 51px;
+  width: 325px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: $button-background;
+  border-radius: 6px;
+  cursor: pointer;
+
+  @media (max-width: $max-tablet-width) {
+    width: 321px;
+    padding: 15px 49px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    @include size(287px, 51px);
+    padding: 15px 32px;
+    padding-bottom: 20px;
+    margin-right: 2px;
+    align-self: center;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $button-background-focus;
+  }
+}
