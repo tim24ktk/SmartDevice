@@ -1,103 +1,98 @@
 .contacts-list {
-  width: 570px;
+  @include reset_for_list;
+  margin-left: auto;
+  margin-right: 2.71%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-
-  @include reset_for_list;
-
-  margin-top: 35px;
-  margin-right: 6px;
+  width: 45%;
+  justify-content: flex-end;
+  align-content: center;
 
   @media (max-width: $max-tablet-width) {
-    margin-top: 22px;
-    margin-right: 4px;
-  }
-
-  @media (max-width: $max-mobile-width) {
-    margin-top: 23px;
     margin-right: 0;
-    flex-direction: column;
-    width: 85%;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
   }
 }
 
 .contacts-list__item {
-  margin-bottom: 15px;
+  @include reset;
+  margin-top: 17px;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 0;
+  }
+}
+
+.contacts-list__item:first-child {
+  @media (max-width: $max-tablet-width) {
+    margin-right: 14px;
+  }
 
   @media (max-width: $max-mobile-width) {
-    margin-top: 9px;
+    margin-right: 3px;
   }
 }
 
 .contacts-list__link {
-  width: 274px;
-  display: block;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
 
   @include reset;
-  font-size: 16px;
-  line-height: 22px;
-  color: $transparency-black;
-  text-align: right;
+  margin-top: 18px;
+  padding: 10px;
+  font-family: "PT Mono", "Arial", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.83vw;
+  line-height: 18px;
+  color: $white;
 
-  &--mail {
-    &::before {
-      position: absolute;
-      top: 1px;
-      left: 6px;
-      content: "";
-
-      @include size(26px, 20px);
-      background-image: url("../img/mail.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $max-tablet-width) {
-        left: 8px;
-      }
-
-      @media (max-width: $max-mobile-width) {
-        left: 7px;
-      }
-    }
-  }
-
-  &--phone {
-    width: 192px;
-    margin-right: 18px;
-
-    &::before {
-      position: absolute;
-      top: -3px;
-      left: 6px;
-      content: "";
-
-      @include size(18px, 25px);
-      background-image: url("../img/phone.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $max-tablet-width) {
-        left: 5px;
-      }
-
-      @media (max-width: $max-mobile-width) {
-        left: 4px;
-      }
-    }
-
-    @media (max-width: $max-tablet-width) {
-      margin-right: 15px;
-    }
+  @media (max-width: $max-mobile-width) {
+    margin-top: 8px;
   }
 
   &:hover {
-    color: $button-background;
+    color: $hover-background;
 
-    &::before {
-      opacity: 0.5;
+    .contacts-list__mail-image,
+    .contacts-list__phone-image {
+      fill: $white;
     }
   }
+
+  &--margin {
+    margin-right: 70px;
+
+
+    @media (max-width: $max-tablet-width) {
+      margin-right: 0;
+    }
+
+    span {
+      margin-left: 20px;
+    }
+  }
+}
+
+.contacts-list__link span {
+  margin-left: 16px;
+
+  @media (max-width: $max-tablet-width) {
+    display: none;
+  }
+}
+
+.contacts-list__mail-image {
+  @media (max-width: $max-tablet-width) {
+    @include size(26px, 19px);
+  }
+
+  fill: $sprite-fill;
+}
+
+.contacts-list__phone-image {
+  @media (max-width: $max-tablet-width) {
+    @include size(23px, 23px);
+  }
+
+  fill: $sprite-fill;
 }

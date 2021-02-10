@@ -1,0 +1,27 @@
+.logo {
+  width: 15%;
+  display: flex;
+  margin-top: 33px;
+  margin-left: 13px;
+
+  @media (max-width: $max-tablet-width) {
+    width: 28%;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 12.3%;
+    margin-top: 10px;
+    margin-left: 11px;
+  }
+}
+
+.logo__image-second {
+  margin-top: 10px;
+  margin-left: 16px;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}

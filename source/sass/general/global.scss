@@ -3,14 +3,18 @@
 }
 
 body {
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "PT Mono", "Arial", monospace;
   font-size: 16px;
   font-weight: normal;
   line-height: 22px;
   margin: 0;
   padding: 0;
-  color: #000000;
-  background-color: #ffffff;
+  color: $white;
+  background-color: $promo-background;
+  background-image: url("../img/body-background.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 a {
