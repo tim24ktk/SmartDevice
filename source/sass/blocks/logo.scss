@@ -1,8 +1,8 @@
 .logo {
   width: 15%;
-  display: flex;
   margin-top: 33px;
   margin-left: 13px;
+  align-self: center;
 
   @media (max-width: $max-tablet-width) {
     width: 28%;
@@ -11,17 +11,36 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    width: 12.3%;
+    width: 48.3%;
     margin-top: 10px;
     margin-left: 11px;
   }
 }
 
-.logo__image-second {
-  margin-top: 10px;
-  margin-left: 16px;
+.logo__image {
+  @media (max-width: $max-mobile-width) {
+    width: 147px;
+  }
+}
+
+.logo__white {
+  fill: $white;
 
   @media (max-width: $max-mobile-width) {
     display: none;
+  }
+}
+
+.logo__gray {
+  fill: $logo-color;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.logo__image .logo__white {
+  &--footer {
+    fill: $basic-black;
   }
 }

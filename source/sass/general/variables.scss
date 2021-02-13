@@ -1,8 +1,14 @@
 $white: #ffffff;
+$white-opacity: rgba($white, 0.5);
 $basic-black: #000000;
 $promo-background: #1b2d37;
+$promo-background-opacity: rgba($promo-background, 0.5);
 $min-mobile-width: 320px;
 $max-mobile-width: 767px;
 $max-tablet-width: 1023px;
 $desktop-width: 1024px;
 $sprite-fill: #00b2ff;
+$logo-color: #788891;
+$social-background: #cdcdcd;
+$border-color: #626962;
+$border-color-opacity: rgba($border-color, 0.2);

@@ -1,0 +1,34 @@
+.phones-list {
+  @include reset_for_list;
+  margin-left: 38.6%;
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 4%;
+  }
+}
+
+.phones-list__item {
+  @include reset;
+}
+
+.phones-list__item-link {
+  @include reset;
+  font-family: "PT Mono", "Arial", monospace;
+  font-weight: normal;
+  font-size: 0.78vw;
+  line-height: 25px;
+  color: $promo-background-opacity;
+
+  &:hover {
+    color: $sprite-fill;
+  }
+
+
+  @media (max-width: $max-tablet-width) {
+    font-size: 15px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 0.6%;
+  }
+}

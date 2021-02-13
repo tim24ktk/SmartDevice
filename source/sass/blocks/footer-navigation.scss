@@ -1,0 +1,147 @@
+.footer-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  width: 84%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+  }
+}
+
+.footer-navigation__list {
+  @include reset;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.footer-navigation__heading {
+  position: relative;
+
+  @include reset;
+  margin-left: 32.1%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.78vw;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $promo-background;
+
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 3.1%;
+    font-size: 15px;
+  }
+
+  &--margin {
+    margin-left: 39%;
+
+    @media (max-width: $max-tablet-width) {
+      margin-left: 4.6%;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-left: 4.7%;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-left: 4.6%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 17px;
+      content: "";
+
+      @include size(16px, 16px);
+      background-image: url("../img/open.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--active {
+    @media (max-width: $max-mobile-width) {
+      &::before {
+        top: 7px;
+        background-image: url("../img/close.svg");
+      }
+    }
+  }
+}
+
+.footer-navigation__panel {
+  @include reset;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+.footer-navigation__address {
+  @include reset;
+  margin-top: 25px;
+  margin-left: 38.6%;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: normal;
+  font-size: 0.78vw;
+  line-height: 25px;
+  color: $promo-background-opacity;
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 4%;
+    font-size: 15px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 32px;
+    margin-left: 4.6%;
+    width: 272px;
+  }
+}
+
+.footer-navigation__wrapper {
+  position: relative;
+  margin-top: 65px;
+  width: 47%;
+
+  &--big {
+    width: 53%;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 64px;
+    width: 50%;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 100%;
+    margin-top: 83px;
+
+    &--margin {
+      margin-top: 56px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -28px;
+      left: auto;
+
+      @include size(100%, 1px);
+      background-color: $border-color-opacity;
+    }
+  }
+}
