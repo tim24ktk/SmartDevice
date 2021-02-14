@@ -1,0 +1,256 @@
+.advantages-list {
+  @include reset_for_list;
+  margin-top: 82px;
+  margin-right: -46px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 84.5%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 100%;
+    margin-top: 24px;
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin: 0;
+    margin-top: 17px;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+.advantages-list__item {
+  @include reset;
+  margin-top: 2.45%;
+  margin-right: 2.45%;
+  padding: 3.31%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 46.9%;
+  min-height: 299px;
+  font-family: "PT Mono", "Arial", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.83vw;
+  line-height: 22px;
+  color: $advanteges-color;
+  border: 1px solid $border;
+  border-left: 3px solid $sprite-fill;
+  background-color: $white;
+
+  h3 {
+    @include reset;
+    margin-top: 3.9%;
+    margin-left: 2px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 34px;
+    color: $sprite-fill;
+
+    @media (max-width: $max-tablet-width) {
+      margin-top: 6px;
+      margin-left: 1px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 12px;
+      margin-left: 2px;
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    @include reset;
+    margin-top: 3.1%;
+    margin-bottom: 5.34%;
+    margin-left: 2px;
+
+    br {
+      display: none;
+    }
+
+    @media (max-width: $max-tablet-width) {
+      width: 297px;
+      margin-top: 9px;
+      line-height: 21.6px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 10px;
+      margin-bottom: 0;
+      width: 265px;
+      line-height: 21.5px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  &--margin {
+    h3 {
+      margin-top: 21px;
+
+      @media (max-width: $max-tablet-width) {
+        margin-top: 10px;
+        max-height: 43px;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        margin-top: 12px;
+      }
+    }
+
+    p {
+      @media (max-width: $max-tablet-width) {
+        margin-top: 6px;
+      }
+
+      @media (max-width: $max-mobile-width) {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &--last-child {
+    p {
+      @media (max-width: $max-mobile-width) {
+        margin-top: 18px;
+      }
+    }
+
+    h3 {
+      @media (max-width: $max-mobile-width) {
+        margin-top: 18px;
+      }
+    }
+
+    @media (max-width: $max-tablet-width) {
+      padding-bottom: 8px;
+
+      h3 {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 30px;
+    margin-right: 0;
+    padding: 24px;
+    padding-bottom: 8px;
+    width: 345px;
+    min-height: 232px;
+    font-size: 16px;
+    border-left: 2px solid $sprite-fill;
+
+    &--text-margin {
+      h3 {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-right: 0;
+    margin-top: 20px;
+    padding-top: 24px;
+    padding-right: 12px;
+    padding-bottom: 26px;
+    padding-left: 23px;
+    width: 292px;
+
+    &--text-margin {
+      padding-bottom: 30px;
+
+      h3 {
+        margin-top: 12px;
+      }
+    }
+
+    &--last-child {
+      padding-bottom: 21px;
+
+      h3 {
+        margin-top: 12px;
+      }
+    }
+  }
+
+
+  &:hover {
+    background-color: $sprite-fill;
+    color: $white;
+    cursor: pointer;
+    border-color: $sprite-fill;
+
+    h3 {
+      color: $white;
+    }
+
+    .advantages-list__image {
+      fill: $white;
+    }
+  }
+
+  span {
+    @media (max-width: $max-tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.advantages-list__item:not(:nth-child(2n)) {
+  @media (max-width: $max-tablet-width) {
+    margin-right: 30px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-right: 0;
+  }
+}
+
+.advantages-list__image {
+  margin-left: 2px;
+  fill: $sprite-fill;
+
+  &--detective {
+    margin-top: 2px;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin-left: 0;
+
+    &--stopwatch {
+      @include size(30px, 36px);
+    }
+
+    &--hired {
+      @include size(32px, 32px);
+    }
+
+    &--detective {
+      @include size(31px, 26px);
+    }
+
+    &--tag {
+      @include size(32px, 32px);
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 0;
+    margin-left: 2px;
+
+    &--tag {
+      margin-left: 4px;
+    }
+  }
+}

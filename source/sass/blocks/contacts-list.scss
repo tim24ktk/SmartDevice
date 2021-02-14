@@ -92,8 +92,8 @@
     margin-top: 2px;
     margin-right: 3px;
 
-    @media (max-width: $max-tablet-width) {
-      margin-right: 0;
+    @media (max-width: $max-mobile-width) {
+      margin-right: 1px;
     }
   }
 }

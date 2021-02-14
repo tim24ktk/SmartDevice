@@ -7,11 +7,11 @@
   flex-direction: column;
 
   @media (max-width: $max-tablet-width) {
-    padding-bottom: 19.3%;
+    padding-bottom: 19.4%;
   }
 
   @media (max-width: $max-mobile-width) {
-    padding-bottom: 55px;
+    padding-bottom: 50px;
   }
 }
 
@@ -73,7 +73,7 @@
     padding-left: 123px;
     width: 465px;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 28px;
 
     br {
       display: none;
@@ -91,6 +91,7 @@
     margin-top: 27px;
     padding-left: 59px;
     font-size: 16px;
+    line-height: 25px;
 
     &::before {
       top: 15px;
