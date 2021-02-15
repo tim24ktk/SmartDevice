@@ -91,7 +91,7 @@
             </a>
           </li>
         </ul>
-        <a href="#" class="order-call">Заказать звонок</a>
+        <button href="#" class="order-call">Заказать звонок</button>
       </nav>
       <section class="promo">
         <h2 class="promo__heading">Печатные платы</h2>
@@ -163,17 +163,35 @@
       <ul class="services-list">
         <li class="services-list__item">
           <a href="" class="services-list__item-link">
-            <h3 class="services-list__item-heading">Производство печатных плат</h3>
+            <picture>
+              <source srcset="img/image@1x.webp 1x, img/image@2x.webp 2x" type="image/webp">
+              <!--1x: 370*620; 2x: 740*1240-->
+              <img class="services-list__big-image services-list__big-image--fill" src="img/image@1x.png" srcset="img/image@2x.png 2x" width="370" height="620" alt="Производство печатных плат">
+            </picture>
+            <h3 class="services-list__item-heading">Производство<br> печатных плат</h3>
+            <img class="services-list__small-image" src="img/rectangle2.svg" width="63" height="63" alt="Нажать">
           </a>
         </li>
         <li class="services-list__item">
           <a href="" class="services-list__item-link">
-            <h3 class="services-list__item-heading">Монтаж печатных плат</h3>
+            <picture>
+              <source srcset="img/image2@1x.webp 1x, img/image2@2x.webp 2x" type="image/webp">
+              <!--1x: 370*620; 2x: 740*1240-->
+              <img class="services-list__big-image" src="img/image2@1x.png" srcset="img/image2@2x.png 2x" width="370" height="620" alt="Монтаж печатных плат">
+            </picture>
+            <h3 class="services-list__item-heading services-list__item-heading--second">Монтаж печатных<br> плат</h3>
+            <img class="services-list__small-image" src="img/rectangle2.svg" width="63" height="63" alt="Нажать">
           </a>
         </li>
         <li class="services-list__item">
           <a href="" class="services-list__item-link">
-            <h3 class="services-list__item-heading">Комплектующие для светотехники</h3>
+            <picture>
+              <source srcset="img/image4@1x.webp 1x, img/image4@2x.webp 2x" type="image/webp">
+              <!--1x: 370*620; 2x: 740*1240-->
+              <img class="services-list__big-image" src="img/image4@1x.png" srcset="img/image4@2x.png 2x" width="370" height="620" alt="Комплектующие для светотехники">
+            </picture>
+            <h3 class="services-list__item-heading services-list__item-heading--third">Комплектующие<br> для светотехники</h3>
+            <img class="services-list__small-image" src="img/rectangle2.svg" width="63" height="63" alt="Нажать">
           </a>
         </li>
       </ul>
@@ -185,8 +203,8 @@
         <label class="visually-hidden" for="name">Имя</label>
         <input type="text" id="name" placeholder="Имя" minlength="2" maxlength="30" required="">
         <label class="visually-hidden" for="phone">Телефон</label>
-        <input type="tel" id="phone" data-inputmask="'mask': '+7 (999) 999-9999'" placeholder="Телефон" required="">
-        <label class="visually-hidden" for="question">Введите ваш вопрос</label>
+        <input type="tel" id="phone" placeholder="Телефон" required="">
+        <label class="visually-hidden" for="question" required="">Введите ваш вопрос</label>
         <textarea name="" id="question" cols="" rows="" placeholder="Ваш вопрос"></textarea>
         <input type="checkbox" name="request-consent" id="request-consent" checked="">
         <label for="request-consent">Я согласен на обработку  персональных данных</label>

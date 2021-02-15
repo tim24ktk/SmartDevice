@@ -1,0 +1,144 @@
+.services-list {
+  @include reset_for_list;
+  margin-top: 1.6%;
+  margin-left: 6.5%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+
+.services-list__item {
+  @include reset;
+  margin-right: 2.4%;
+  margin-top: 30px;
+  width: 29.43%;
+
+  &:hover {
+    transform: scale(1.05);
+
+    .services-list__big-image {
+      filter: opacity(0.6);
+    }
+  }
+
+  @media (max-width: $max-tablet-width) {
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 7px;
+
+    @include size(720px, 276px);
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 41px;
+
+    @include size(290px, 256px);
+  }
+}
+
+.services-list__item:first-child {
+  @media (max-width: $max-tablet-width) {
+    width: 715px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 41px;
+
+    @include size(290px, 256px);
+  }
+}
+
+.services-list__item:not(:first-child) {
+  @media (max-width: $max-tablet-width) {
+    margin-top: 46px;
+    height: 256px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 30px;
+  }
+}
+
+.services-list__big-image {
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: opacity(0.2);
+
+  @media (max-width: $max-tablet-width) {
+    @include size(721px, 256px);
+
+    &--fill {
+      height: 276px;
+      object-fit: fill;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    height: 256px;
+  }
+}
+
+.services-list__item-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 99%;
+
+  @media (max-width: $max-tablet-width) {
+    height: 100%;
+  }
+}
+
+.services-list__item-heading {
+  position: absolute;
+
+  @include reset;
+  margin-top: 2.6vw;
+  margin-left: 2.3vw;
+  width: 151px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.04vw;
+  line-height: 30px;
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 60px;
+    margin-left: 43px;
+    font-size: 20px;
+
+    &--second {
+      margin-top: 40px;
+    }
+
+    &--third {
+      margin-top: 50px;
+      margin-left: 45px;
+    }
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 20px;
+    margin-left: 35px;
+
+    &--third {
+      margin-top: 29px;
+      margin-left: 36px;
+    }
+  }
+}
+
+.services-list__small-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16.95%;
+
+  @include size(63px, 63px);
+}
