@@ -1,0 +1,196 @@
+.popup {
+  display: none;
+}
+
+.popup__active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: $popup-background;
+  z-index: 100;
+}
+
+.popup__wrapper {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  left: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto;
+  padding: 1.05%;
+  width: 25.5vw;
+  background-color: $sprite-fill;
+}
+
+.popup__heading {
+  @include reset;
+  margin-top: -2.3%;
+  margin-left: 4.2%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140.62%;
+  color: $white;
+}
+
+.popup__description {
+  @include reset;
+
+  margin-top: 2.9%;
+  margin-left: 4.1%;
+  width: 83%;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  line-height: 22px;
+  color: $white;
+}
+
+.popup__close {
+  align-self: flex-end;
+
+  @include btn-reset;
+  cursor: pointer;
+
+  svg {
+    fill: $white;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $social-background;
+    }
+  }
+}
+
+
+.popup__feedback {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 3.8%;
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    margin-top: 6.9%;
+    padding: 2%;
+    padding-left: 25px;
+    background-color: $input-background;
+    border: none;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 92%;
+    height: 6vh;
+    line-height: 3vw;
+  }
+
+  input {
+    &::placeholder {
+      font-family: "PT Mono", "Arial", monospace;
+      font-weight: 400;
+      font-size: 0.8vw;
+      line-height: 1.3vw;
+      color: $white;
+    }
+  }
+
+  textarea {
+    @include size(92%, 12vh);
+
+    &::placeholder {
+      font-family: "PT Mono", "Arial", monospace;
+      font-weight: 400;
+      font-size: 0.8vw;
+      line-height: 1.3vw;
+      letter-spacing: 0.03rem;
+      color: $white;
+    }
+  }
+
+  button {
+    @include size(91.5%, 2.41vw);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include btn-reset;
+    margin-top: 6.5%;
+    padding: 5px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 0.73vw;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+  }
+
+  label:last-child {
+    position: relative;
+    display: block;
+    width: 83.4%;
+    margin-top: 1.8vw;
+    margin-right: 1.9vw;
+    padding-left: 2.5vw;
+    font-family: "PT Mono", "Arial", monospace;
+    font-weight: 400;
+    font-size: 0.75vw;
+    line-height: 16px;
+    color: $white;
+    opacity: 0.8;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include size(16px, 16px);
+    background-image: url("../img/no-checked.svg");
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include size(16px, 16px);
+    background-image: url("../img/checkbox.svg");
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"]:focus + label::before,
+  input[type="checkbox"]:hover + label::before {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}

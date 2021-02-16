@@ -42,7 +42,7 @@
             </a>
           </li>
         </ul>
-        <button href="#" class="order-call">Заказать звонок</button>
+        <button type="button" class="order-call">Заказать звонок</button>
       </nav>
       <section class="promo">
         <h2 class="promo__heading">Печатные платы</h2>
@@ -148,19 +148,23 @@
       </ul>
     </section>
     <section id="feedback" class="feedback">
-      <h2 class="feedback__heading">Остались вопросы? Задайте их нам!</h2>
-      <p class="feedback__consultation">Мы проконсультируем Вас бесплатно</p>
-      <form class="feedback__form" action="#" method="POST">
-        <label class="visually-hidden" for="name">Имя</label>
-        <input type="text" id="name" placeholder="Имя" minlength="2" maxlength="30" required>
-        <label class="visually-hidden" for="phone">Телефон</label>
-        <input type="tel" id="phone" placeholder="Телефон" required>
-        <label class="visually-hidden" for="question" required>Введите ваш вопрос</label>
-        <textarea name="" id="question" cols="" rows="" placeholder="Ваш вопрос"></textarea>
-        <input type="checkbox" name="request-consent" id="request-consent" checked="">
-        <label for="request-consent">Я согласен на обработку  персональных данных</label>
-        <button type="submit">Задать вопрос</button>
-      </form>
+      <div class="feedback__container">
+        <div class="feedback__wrapper">
+          <h2 class="feedback__heading">Остались вопросы? Задайте их нам!</h2>
+          <p class="feedback__consultation">Мы проконсультируем Вас бесплатно</p>
+          <form class="feedback__form" action="#" method="POST">
+            <label class="visually-hidden" for="name">Имя</label>
+            <input type="text" id="name" placeholder="Имя" minlength="2" maxlength="30" required>
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input type="tel" id="phone" placeholder="Телефон" required>
+            <label class="visually-hidden" for="question">Введите ваш вопрос</label>
+            <textarea name="question" id="question" placeholder="Ваш вопрос" required></textarea>
+            <button type="submit">Задать вопрос</button>
+            <input class="visually-hidden" type="checkbox" name="request-consent" id="request-consent" checked>
+            <label for="request-consent">Я согласен на обработку<br>  персональных данных</label>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="footer">
@@ -249,6 +253,31 @@
       <p class="copyright__end">Developed by wow studio </p>
     </section>
   </footer>
+
+  <section class="popup">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <div class="popup__wrapper">
+      <button class="popup__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg role="img" aria-label="Закрыть попап" width="17" height="17">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="popup__heading">Закажите звонок</h2>
+      <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="popup__feedback" action="#" method="POST">
+        <label class="visually-hidden" for="popup-name">Имя</label>
+        <input type="text" id="popup-name" placeholder="Имя" minlength="2" maxlength="30" required>
+        <label class="visually-hidden" for="popup-phone">Телефон</label>
+        <input type="tel" id="popup-phone" placeholder="Телефон" required>
+        <label class="visually-hidden" for="popup-question">Введите ваш вопрос</label>
+        <textarea name="popup-question" id="popup-question" placeholder="Ваш вопрос" required></textarea>
+        <button type="submit">Отправить</button>
+        <input class="visually-hidden" type="checkbox" name="request-consent" id="request" checked>
+        <label for="request">Я согласен на обработку  персональных данных</label>
+      </form>
+    </div>
+  </section>
   <script src="js/main.js"></script>
 </body>
 

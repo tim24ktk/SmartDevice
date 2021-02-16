@@ -1,0 +1,307 @@
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 5.9%;
+  background-color: $sprite-fill;
+  background-image: url("../img/paper-airplane.svg"), url("../img/group20.svg"), url("../img/polygon.svg"), url("../img/polygon2.svg");
+  background-repeat: no-repeat;
+  background-position: 24.84% 41.98%, 14% -221%, 100.05% 108.95%, 99.2% 10%;
+  background-size: 26.6%, 35%, 17.9%, 13.8%;
+
+  @media (max-width: $max-tablet-width) {
+    padding-bottom: 103px;
+    background-image: none;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    padding-bottom: 43px;
+  }
+}
+
+.feedback__container {
+  width: 62%;
+  margin: 0 auto;
+  margin-top: 4.74%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 594px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 290px;
+    margin: 0 auto;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @media (max-width: $max-tablet-width) {
+    align-items: center;
+    margin-top: 78px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 29px;
+  }
+}
+
+.feedback__heading {
+  @include reset;
+  margin-right: 3.42%;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1.876vw;
+  line-height: 51px;
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    margin-right: auto;
+    margin-top: 1px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 243px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.feedback__consultation {
+  @include reset;
+  margin-top: 0.8%;
+  margin-right: 22.1%;
+  font-family: "PT Mono", "Arial", monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.834vw;
+  line-height: 22px;
+  color: $white;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 17px;
+    margin-right: auto;
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 13px;
+    margin-left: 0;
+  }
+}
+
+.feedback__form {
+  margin-top: 4.3%;
+  margin-right: 0.9%;
+  width: 47.85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $max-tablet-width) {
+    margin-top: 54px;
+    margin-left: 5px;
+    width: 591px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 290px;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    content: "";
+    position: absolute;
+    top: 0.1vw;
+    left: 0.36vw;
+
+    @include size(16px, 16px);
+    background-image: url("../img/no-checked.svg");
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+    position: absolute;
+    top: 0.1vw;
+    left: 0.36vw;
+
+    @include size(16px, 16px);
+    background-image: url("../img/checkbox.svg");
+    background-repeat: no-repeat;
+  }
+
+  input[type="checkbox"]:focus + label::before,
+  input[type="checkbox"]:hover + label::before {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  label:last-child {
+    position: relative;
+    display: block;
+    margin-top: 2.6vw;
+    margin-right: 1.9vw;
+    padding-left: 2vw;
+    font-family: "PT Mono", "Arial", monospace;
+    font-weight: 400;
+    font-size: 0.73vw;
+    line-height: 16px;
+    color: $white;
+    opacity: 0.8;
+
+    @media (max-width: $max-tablet-width) {
+      margin-top: 52px;
+      margin-right: 46px;
+      padding-left: 37px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 29px;
+      margin-right: auto;
+      padding-left: 34px;
+    }
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    padding: 2%;
+    padding-left: 16px;
+    background-color: $input-background;
+    border: none;
+
+    @media (max-width: $max-mobile-width) {
+      padding-top: 12px;
+    }
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    line-height: 3vw;
+
+    @include size(47.1%, 2.6vw);
+
+    @media (max-width: $max-tablet-width) {
+      @include size(280px, 52px);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      width: 290px;
+    }
+  }
+
+  input[type="text"] {
+    @media (max-width: $max-mobile-width) {
+      margin-top: 16px;
+    }
+  }
+
+  input[type="tel"] {
+    @media (max-width: $max-mobile-width) {
+      margin-top: 30px;
+    }
+  }
+
+  textarea {
+    margin-top: 40px;
+    padding-top: 1.8%;
+
+    @include size(100%, 8vw);
+
+    &::placeholder {
+      font-family: "PT Mono", "Arial", monospace;
+      font-weight: 400;
+      font-size: 0.8vw;
+      line-height: 1.3vw;
+      letter-spacing: 0.03rem;
+      color: $white;
+
+
+      @media (max-width: $max-tablet-width) {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.003rem;
+      }
+    }
+
+    @media (max-width: $max-tablet-width) {
+      @include size(591px, 160px);
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 30px;
+      padding-top: 12px;
+      height: 104px;
+    }
+  }
+
+  input {
+    &::placeholder {
+      font-family: "PT Mono", "Arial", monospace;
+      font-weight: 400;
+      font-size: 0.8vw;
+      line-height: 1.3vw;
+      color: $white;
+
+
+      @media (max-width: $max-tablet-width) {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  button {
+    @include size(47.35%, 2.3vw);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @include btn-reset;
+    margin-top: 7.5%;
+    padding: 5px;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 0.73vw;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    @media (max-width: $max-tablet-width) {
+      margin-top: 44px;
+
+      @include size(279px, 47px);
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (max-width: $max-mobile-width) {
+      margin-top: 29px;
+      width: 290px;
+    }
+  }
+}
