@@ -125,7 +125,7 @@
     left: 0.36vw;
 
     @include size(16px, 16px);
-    background-image: url("../img/no-checked.svg");
+    background-image: url("../img/checkbox.svg");
     background-repeat: no-repeat;
   }
 
@@ -136,7 +136,7 @@
     left: 0.36vw;
 
     @include size(16px, 16px);
-    background-image: url("../img/checkbox.svg");
+    background-image: url("../img/no-checked.svg");
     background-repeat: no-repeat;
   }
 
