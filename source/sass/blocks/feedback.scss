@@ -1,12 +1,12 @@
 .feedback {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 5.9%;
+  padding-bottom: 5.85%;
   background-color: $sprite-fill;
   background-image: url("../img/paper-airplane.svg"), url("../img/group20.svg"), url("../img/polygon.svg"), url("../img/polygon2.svg");
   background-repeat: no-repeat;
-  background-position: 24.84% 41.98%, 14% -221%, 100.05% 108.95%, 99.2% 10%;
-  background-size: 26.6%, 35%, 17.9%, 13.8%;
+  background-position: 24.8% 41.98%, 14% -221%, 100.05% 108.95%, 99.2% 10%;
+  background-size: 26.55%, 35%, 17.9%, 13.8%;
 
   @media (max-width: $max-tablet-width) {
     padding-bottom: 103px;
@@ -177,7 +177,7 @@
   input[type="text"],
   input[type="tel"],
   textarea {
-    padding: 2%;
+    padding: 10px;
     padding-left: 16px;
     background-color: $input-background;
     border: none;
@@ -189,9 +189,9 @@
 
   input[type="text"],
   input[type="tel"] {
-    line-height: 3vw;
+    line-height: 70px;
 
-    @include size(47.1%, 2.6vw);
+    @include size(47.1%, 50px);
 
     @media (max-width: $max-tablet-width) {
       @include size(280px, 52px);
@@ -218,20 +218,18 @@
     margin-top: 40px;
     padding-top: 1.8%;
 
-    @include size(100%, 8vw);
+    @include size(100%, 154px);
 
     &::placeholder {
       font-family: "PT Mono", "Arial", monospace;
       font-weight: 400;
-      font-size: 0.8vw;
-      line-height: 1.3vw;
-      letter-spacing: 0.03rem;
+      font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0.01rem;
       color: $white;
 
 
       @media (max-width: $max-tablet-width) {
-        font-size: 16px;
-        line-height: 22px;
         letter-spacing: 0.003rem;
       }
     }
@@ -251,27 +249,21 @@
     &::placeholder {
       font-family: "PT Mono", "Arial", monospace;
       font-weight: 400;
-      font-size: 0.8vw;
-      line-height: 1.3vw;
+      font-size: 16px;
+      line-height: 26px;
       color: $white;
-
-
-      @media (max-width: $max-tablet-width) {
-        font-size: 16px;
-        line-height: 22px;
-      }
     }
   }
 
   button {
-    @include size(47.35%, 2.3vw);
+    @include size(47.35%, 45px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
     @include btn-reset;
-    margin-top: 7.5%;
+    margin-top: 7.4%;
     padding: 5px;
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;

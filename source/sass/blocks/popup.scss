@@ -17,7 +17,7 @@
 
 .popup__wrapper {
   position: fixed;
-  top: 50%;
+  top: 51.17%;
   right: 0;
   bottom: auto;
   left: 0;
@@ -26,7 +26,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto;
-  padding: 1.05%;
+  padding: 1.037%;
   width: 25.5vw;
   background-color: $sprite-fill;
 }
@@ -37,7 +37,7 @@
   margin-left: 4.2%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.46vw;
   line-height: 140.62%;
   color: $white;
 }
@@ -45,12 +45,12 @@
 .popup__description {
   @include reset;
 
-  margin-top: 2.9%;
+  margin-top: 2.4%;
   margin-left: 4.1%;
   width: 83%;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 100%;
+  font-size: 0.835vw;
   line-height: 22px;
   color: $white;
 }
@@ -85,8 +85,7 @@
   input[type="text"],
   input[type="tel"],
   textarea {
-    margin-top: 6.9%;
-    padding: 2%;
+    padding: 10px;
     padding-left: 25px;
     background-color: $input-background;
     border: none;
@@ -94,36 +93,41 @@
 
   input[type="text"],
   input[type="tel"] {
-    width: 92%;
-    height: 6vh;
-    line-height: 3vw;
+    margin-top: 7%;
+    width: 91.8%;
+    height: 52px;
+    line-height: 70px;
   }
 
   input {
     &::placeholder {
+      padding: 10px;
       font-family: "PT Mono", "Arial", monospace;
       font-weight: 400;
-      font-size: 0.8vw;
-      line-height: 1.3vw;
+      font-size: 16px;
+      line-height: 25px;
       color: $white;
     }
   }
 
   textarea {
-    @include size(92%, 12vh);
+    margin-top: 6.3%;
+
+    @include size(91.8%, 104px);
 
     &::placeholder {
+      padding: 11px;
       font-family: "PT Mono", "Arial", monospace;
       font-weight: 400;
-      font-size: 0.8vw;
-      line-height: 1.3vw;
-      letter-spacing: 0.03rem;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.01rem;
       color: $white;
     }
   }
 
   button {
-    @include size(91.5%, 2.41vw);
+    @include size(91.5%, 47px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
