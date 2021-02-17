@@ -15,6 +15,7 @@
   const popupQuestion = document.querySelector(`#popup-question`);
   const orderCall = document.querySelector(`.order-call`);
   const popupClose = document.querySelector(`.popup__close`);
+  const popupWrapper = popup.querySelector(`.popup__wrapper`);
 
   let isStorageSupport = true;
   const storageName = ``;
@@ -157,14 +158,17 @@
       popup.classList.remove(`popup__active`);
     });
   }
-const popupWrapper = popup.querySelector(`.popup-wrapper`);
 
-  if (popup) {
-    if (popupWrapper) {
-      popup.addEventListener(`click`, () => {
+  if (popupWrapper) {
+    popupWrapper.addEventListener(`click`, (evt) => {
+      evt.stopPropagation();
+    });
+  }
+
+    if (popup) {
+      popup.addEventListener(`click`, function() {
         popup.classList.remove(`popup__active`);
       });
+      popup.addEventListener(`keydown`, onEscapeKeydown);
     }
-    popup.addEventListener(`keydown`, onEscapeKeydown);
-  }
-})();
+  })();
