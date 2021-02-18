@@ -75,13 +75,10 @@
   popupPhone.addEventListener(`blur`, mask, false);
 
   try {
-    storageName = localStorage.getItem(`firstName`);
-    storagePhone = localStorage.getItem(`yourPhone`);
-    storageQuestion = localStorage.getItem(`yourQuestion`);
 
-    storagePopupName = localStorage.getItem(`popupName`);
-    storagePopupPhone = localStorage.getItem(`popupPhone`);
-    storagePopupQuestion = localStorage.getItem(`popupQuestion`);
+    storageName = localStorage.getItem(`name`);
+    storagePhone = localStorage.getItem(`phone`);
+    storageQuestion = localStorage.getItem(`question`);
 
   } catch (err) {
     isStorageSupport = false;
@@ -91,22 +88,22 @@
     orderCall.addEventListener(`click`, () => {
       popup.classList.add(`popup__active`);
       popupName.focus();
-      if (storagePopupName) {
-        popupName.value = storagePopupName;
-        if (popupPhone) {
+      if (storageName) {
+        popupName.value = storageName;
+        if (storagePhone) {
           popupPhone.focus();
         }
       }
 
-      if (storagePopupPhone) {
-        popupPhone.value = storagePopupPhone;
+      if (storagePhone) {
+        popupPhone.value = storagePhone;
         if (popupQuestion) {
           popupQuestion.focus();
         }
       }
 
-      if (storagePopupQuestion) {
-        popupQuestion.value = storagePopupQuestion;
+      if (storageQuestion) {
+        popupQuestion.value = storageQuestion;
       }
     });
   }
