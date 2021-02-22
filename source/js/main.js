@@ -18,12 +18,9 @@
   const popupWrapper = popup.querySelector(`.popup__wrapper`);
 
   let isStorageSupport = true;
-  const storageName = ``;
-  const storagePhone = ``;
-  const storageQuestion = ``;
-  const storagePopupName = ``;
-  const storagePopupPhone = ``;
-  const storagePopupQuestion = ``;
+  let storageName = ``;
+  let storagePhone = ``;
+  let storageQuestion = ``;
 
   if (accordionButtons) {
     let activePanel;
