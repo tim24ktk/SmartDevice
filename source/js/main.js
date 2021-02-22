@@ -16,6 +16,7 @@
   const orderCall = document.querySelector(`.order-call`);
   const popupClose = document.querySelector(`.popup__close`);
   const popupWrapper = popup.querySelector(`.popup__wrapper`);
+  const body = document.querySelector(`body`);
 
   let isStorageSupport = true;
   let storageName = ``;
@@ -85,6 +86,7 @@
     orderCall.addEventListener(`click`, () => {
       popup.classList.add(`popup__active`);
       popupName.focus();
+      body.classList.add(`body-position`);
       if (storageName) {
         popupName.value = storageName;
         if (storagePhone) {
@@ -140,15 +142,18 @@
 
   const closePopup = () => {
       popup.classList.remove(`popup__active`);
+      body.classList.remove(`body-position`);
   }
 
   const onEscapeKeydown = (evt) => {
     checkEscape(evt, closePopup);
+    body.classList.remove(`body-position`);
   };
 
   if (popupClose) {
     popupClose.addEventListener(`click`, () => {
       popup.classList.remove(`popup__active`);
+      body.classList.remove(`body-position`);
     });
   }
 
@@ -161,6 +166,7 @@
     if (popup) {
       popup.addEventListener(`click`, function() {
         popup.classList.remove(`popup__active`);
+        body.classList.remove(`body-position`);
       });
       popup.addEventListener(`keydown`, onEscapeKeydown);
     }

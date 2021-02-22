@@ -11,6 +11,11 @@
     margin-left: 2.6%;
     flex-direction: column;
   }
+
+  @media (max-width: $max-mobile-width) {
+    width: 96%;
+    margin-left: 4%;
+  }
 }
 
 .navigation-list__item {
