@@ -99,7 +99,7 @@
 }
 
 .feedback__form {
-  margin-top: 4.3%;
+  margin-top: 3.5%;
   margin-right: 0.9%;
   width: 47.85%;
   display: flex;
@@ -107,7 +107,7 @@
   justify-content: space-between;
 
   @media (max-width: $max-tablet-width) {
-    margin-top: 54px;
+    margin-top: 34px;
     margin-left: 5px;
     width: 591px;
   }
@@ -190,11 +190,14 @@
 
   input[type="text"],
   input[type="tel"] {
+    margin-top: 1.8%;
     line-height: 70px;
 
     @include size(47.1%, 50px);
 
     @media (max-width: $max-tablet-width) {
+      margin-top: 20px;
+
       @include size(280px, 52px);
     }
 
