@@ -27,7 +27,7 @@
   if (navigationPanels) {
     navigationPanels.forEach((panel) => {
       if (panel.classList.contains(`footer-navigation__panel--active`)) {
-        panel.classList.remove(`footer-navigation__panel--active`)
+        panel.classList.remove(`footer-navigation__panel--active`);
       }
     });
   }
@@ -70,7 +70,7 @@
     let val = this.value.replace(/\D/g, ``);
     if (def.length >= val.length) val = def;
     this.value = matrix.replace(/./g, function(a) {
-        return /[_\d]/.test(a) && i <= val.length ? val.charAt(i++) : i > val.length ? `` : a
+      return /[_\d]/.test(a) && i <= val.length ? val.charAt(i++) : i < val.length ? a : i++ === 1 && val.length === 1 && event.keyCode != 8 && event.keyCode != `` ? `(` : ``;
     });
     if (event.type === `blur`) {
         if (this.value.length === 3) this.value = ``;
