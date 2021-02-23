@@ -17,15 +17,27 @@
   const popupClose = document.querySelector(`.popup__close`);
   const popupWrapper = popup.querySelector(`.popup__wrapper`);
   const body = document.querySelector(`body`);
+  const navigationPanels = document.querySelectorAll(`.footer-navigation__panel`);
 
   let isStorageSupport = true;
   let storageName = ``;
   let storagePhone = ``;
   let storageQuestion = ``;
 
+  if (navigationPanels) {
+    navigationPanels.forEach((panel) => {
+      if (panel.classList.contains(`footer-navigation__panel--active`)) {
+        panel.classList.remove(`footer-navigation__panel--active`)
+      }
+    });
+  }
+
   if (accordionButtons) {
     let activePanel;
     accordionButtons.forEach(function(item) {
+      if (item.classList.contains(`footer-navigation__heading--active`)) {
+        item.classList.remove(`footer-navigation__heading--active`)
+      }
       item.addEventListener('click', function() {
         this.classList.add(`footer-navigation__heading--active`);
         this.nextElementSibling.classList.add('footer-navigation__panel--active');
