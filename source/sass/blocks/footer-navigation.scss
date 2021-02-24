@@ -76,6 +76,12 @@
       }
     }
   }
+
+  &--no-js {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .footer-navigation__panel {

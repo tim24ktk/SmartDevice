@@ -67,14 +67,27 @@
 .copyright__conditions {
   @include reset;
   margin-left: 9.9%;
+  height: max-content;
+  font-family: "PT Mono", "Arial", monospace;
+  font-weight: 400;
+  font-size: 0.68vw;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $promo-background-opacity;
 
   @media (max-width: $max-tablet-width) {
     margin-top: 10px;
     margin-left: 0;
+    font-size: 13px;
   }
 
   @media (max-width: $max-mobile-width) {
     margin: auto;
+  }
+
+  &:hover {
+    color: $sprite-fill;
   }
 }
 

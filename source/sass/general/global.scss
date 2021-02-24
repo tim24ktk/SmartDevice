@@ -13,6 +13,10 @@ body {
   background-color: $promo-background;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .body-position {
   position: fixed;
 }

@@ -35,6 +35,7 @@
 
 .navigation-list__item-link {
   @include reset;
+  width: max-content;
   font-family: "PT Mono", "Arial", monospace;
   font-weight: normal;
   font-size: 0.78vw;

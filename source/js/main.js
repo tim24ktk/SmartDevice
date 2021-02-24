@@ -35,8 +35,8 @@
   if (accordionButtons) {
     let activePanel;
     accordionButtons.forEach(function(item) {
-      if (item.classList.contains(`footer-navigation__heading--active`)) {
-        item.classList.remove(`footer-navigation__heading--active`)
+      if (item.classList.contains(`footer-navigation__heading--no-js`)) {
+        item.classList.remove(`footer-navigation__heading--no-js`)
       }
       item.addEventListener('click', function() {
         this.classList.add(`footer-navigation__heading--active`);
