@@ -1,0 +1,7 @@
+.logo-white {
+  fill: $white;
+
+  @media (max-width: $max-mobile-width) {
+    display: none;
+  }
+}

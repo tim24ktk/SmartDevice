@@ -22,25 +22,3 @@
     width: 147px;
   }
 }
-
-.logo__white {
-  fill: $white;
-
-  @media (max-width: $max-mobile-width) {
-    display: none;
-  }
-}
-
-.logo__gray {
-  fill: $logo-color;
-
-  @media (max-width: $max-mobile-width) {
-    display: none;
-  }
-}
-
-.logo__image .logo__white {
-  &--footer {
-    fill: $basic-black;
-  }
-}
