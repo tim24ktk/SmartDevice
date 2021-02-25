@@ -1,18 +1,31 @@
 .popup {
   display: none;
-}
 
-.popup__active {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: $popup-background;
-  z-index: 100;
+  &--active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $popup-background;
+    z-index: 100;
+  }
+
+  &--no-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $popup-background;
+    z-index: 100;
+  }
 }
 
 .popup__wrapper {
@@ -59,7 +72,9 @@
   align-self: flex-end;
 
   @include btn-reset;
+  padding: 10px;
   cursor: pointer;
+  order: -1;
 
   svg {
     fill: $white;

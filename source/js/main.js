@@ -18,18 +18,19 @@
   const popupWrapper = popup.querySelector(`.popup__wrapper`);
   const body = document.querySelector(`body`);
   const navigationPanels = document.querySelectorAll(`.footer-navigation__panel`);
-  const smoothLinks = document.querySelectorAll(`a[href^="#"]`);
+  const anchors = document.querySelectorAll(`a.scroll-to`);
 
-  smoothLinks.forEach((smoothLink) => {
-    smoothLink.addEventListener('click', function (evt) {
+  anchors.forEach((anchor) => {
+    anchor.addEventListener(`click`, function (evt) {
       evt.preventDefault();
-      const id = smoothLink.getAttribute('href');
 
-      document.querySelector(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
+      const blockID = anchor.getAttribute(`href`)
+
+      document.querySelector(blockID).scrollIntoView({
+        behavior: `smooth`,
+        block: `start`
+      })
+    })
   });
 
   let isStorageSupport = true;
@@ -108,8 +109,9 @@
   }
 
   if (orderCall) {
-    orderCall.addEventListener(`click`, () => {
-      popup.classList.add(`popup__active`);
+    orderCall.addEventListener(`click`, (evt) => {
+      evt.preventDefault();
+      popup.classList.add(`popup--active`);
       popupName.focus();
       body.classList.add(`body-position`);
       if (storageName) {
@@ -166,7 +168,7 @@
   };
 
   const closePopup = () => {
-      popup.classList.remove(`popup__active`);
+      popup.classList.remove(`popup--active`);
       body.classList.remove(`body-position`);
   }
 
@@ -177,7 +179,7 @@
 
   if (popupClose) {
     popupClose.addEventListener(`click`, () => {
-      popup.classList.remove(`popup__active`);
+      popup.classList.remove(`popup--active`);
       body.classList.remove(`body-position`);
     });
   }
@@ -190,7 +192,7 @@
 
     if (popup) {
       popup.addEventListener(`click`, function() {
-        popup.classList.remove(`popup__active`);
+        popup.classList.remove(`popup--active`);
         body.classList.remove(`body-position`);
       });
       popup.addEventListener(`keydown`, onEscapeKeydown);
