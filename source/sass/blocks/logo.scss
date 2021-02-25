@@ -18,6 +18,12 @@
 }
 
 .logo__image {
+  width: 93.5%;
+
+  @media (max-width: $max-tablet-width) {
+    width: 202px;
+  }
+
   @media (max-width: $max-mobile-width) {
     width: 147px;
   }

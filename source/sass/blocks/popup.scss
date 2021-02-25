@@ -30,7 +30,7 @@
 
 .popup__wrapper {
   position: fixed;
-  top: 51.17%;
+  top: 51%;
   right: 0;
   bottom: auto;
   left: 0;
@@ -39,18 +39,19 @@
   flex-wrap: wrap;
   flex-direction: column;
   margin: auto;
-  padding: 1.037%;
+  padding: 1.1% 1.037%;
+  min-width: 490px;
   width: 25.5vw;
   background-color: $sprite-fill;
 }
 
 .popup__heading {
   @include reset;
-  margin-top: -2.3%;
+  margin-top: 9px;
   margin-left: 4.2%;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 1.46vw;
+  font-size: 28px;
   line-height: 140.62%;
   color: $white;
 }
@@ -58,23 +59,24 @@
 .popup__description {
   @include reset;
 
-  margin-top: 2.4%;
+  margin-top: 2.7%;
   margin-left: 4.1%;
   width: 83%;
   font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 0.835vw;
+  font-size: 16px;
   line-height: 22px;
   color: $white;
 }
 
 .popup__close {
-  align-self: flex-end;
+  position: absolute;
+  top: 9px;
+  right: 10px;
 
   @include btn-reset;
   padding: 10px;
   cursor: pointer;
-  order: -1;
 
   svg {
     fill: $white;
@@ -105,14 +107,19 @@
     color: $white;
     background-color: $input-background;
     border: none;
+    border-radius: 0;
   }
 
   input[type="text"],
   input[type="tel"] {
-    margin-top: 7%;
+    margin-top: 7.2%;
     width: 91.8%;
     height: 52px;
     line-height: 44px;
+  }
+
+  input[type="tel"] {
+    margin-top: 6.8%;
   }
 
   input {
@@ -127,9 +134,10 @@
   }
 
   textarea {
-    margin-top: 6.3%;
+    margin-top: 6.5%;
 
     @include size(91.8%, 104px);
+    resize: none;
 
     &::placeholder {
       padding: 11px;
@@ -175,7 +183,7 @@
     position: relative;
     display: block;
     width: 83.4%;
-    margin-top: 1.8vw;
+    margin-top: 1.7vw;
     margin-right: 1.9vw;
     padding-left: 2.5vw;
     font-family: "PT Mono", "Arial", monospace;
@@ -189,7 +197,7 @@
   input[type="checkbox"]:checked + label::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
 
     @include size(16px, 16px);

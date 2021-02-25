@@ -112,8 +112,8 @@
     orderCall.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       popup.classList.add(`popup--active`);
-      popupName.focus();
       body.classList.add(`body-position`);
+      popupName.focus();
       if (storageName) {
         popupName.value = storageName;
         if (storagePhone) {

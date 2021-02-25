@@ -180,6 +180,7 @@
     padding-left: 16px;
     background-color: $input-background;
     border: none;
+    border-radius: 0;
 
     @media (max-width: $max-mobile-width) {
       padding-top: 12px;
@@ -221,6 +222,7 @@
     padding-top: 1.8%;
 
     @include size(570px, 154px);
+    resize: none;
 
     &::placeholder {
       font-family: "PT Mono", "Arial", monospace;

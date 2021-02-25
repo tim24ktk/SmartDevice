@@ -1,0 +1,14 @@
+.menu-wrapper {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  @media (max-width: $middle-breakpoint) {
+    width: 60%;
+  }
+
+  @media (max-width: $max-tablet-width) {
+    width: auto;
+  }
+}
