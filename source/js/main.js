@@ -18,6 +18,19 @@
   const popupWrapper = popup.querySelector(`.popup__wrapper`);
   const body = document.querySelector(`body`);
   const navigationPanels = document.querySelectorAll(`.footer-navigation__panel`);
+  const smoothLinks = document.querySelectorAll(`a[href^="#"]`);
+
+  smoothLinks.forEach((smoothLink) => {
+    smoothLink.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      const id = smoothLink.getAttribute('href');
+
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
 
   let isStorageSupport = true;
   let storageName = ``;
