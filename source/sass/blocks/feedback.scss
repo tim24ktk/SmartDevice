@@ -52,10 +52,10 @@
 
 .feedback__heading {
   @include reset;
-  margin-right: 3.42%;
+  margin-right: 40px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 1.876vw;
+  font-size: 36px;
   line-height: 51px;
   color: $white;
 
@@ -75,12 +75,12 @@
 
 .feedback__consultation {
   @include reset;
-  margin-top: 0.8%;
-  margin-right: 22.1%;
+  margin-top: 9.5px;
+  margin-right: 263px;
   font-family: "PT Mono", "Arial", monospace;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.834vw;
+  font-size: 16px;
   line-height: 22px;
   color: $white;
 
@@ -99,9 +99,9 @@
 }
 
 .feedback__form {
-  margin-top: 3.5%;
-  margin-right: 0.9%;
-  width: 47.85%;
+  margin-top: 41px;
+  margin-right: 10px;
+  width: 570px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -149,12 +149,12 @@
   label:last-child {
     position: relative;
     display: block;
-    margin-top: 2.6vw;
-    margin-right: 1.9vw;
-    padding-left: 2vw;
+    margin-top: 50px;
+    margin-right: 36.46px;
+    padding-left: 38.4px;
     font-family: "PT Mono", "Arial", monospace;
     font-weight: 400;
-    font-size: 0.73vw;
+    font-size: 14px;
     line-height: 16px;
     color: $white;
     opacity: 0.8;
@@ -163,8 +163,6 @@
       margin-top: 52px;
       margin-right: 46px;
       padding-left: 37px;
-      font-size: 14px;
-      line-height: 16px;
     }
 
     @media (max-width: $max-mobile-width) {
@@ -177,7 +175,7 @@
   input[type="text"],
   input[type="tel"],
   textarea {
-    color: $white;
+    color: $logo-color;
     padding: 10px;
     padding-left: 16px;
     background-color: $input-background;
@@ -190,10 +188,10 @@
 
   input[type="text"],
   input[type="tel"] {
-    margin-top: 1.8%;
+    margin-top: 10.25px;
     line-height: 70px;
 
-    @include size(47.1%, 50px);
+    @include size(270px, 50px);
 
     @media (max-width: $max-tablet-width) {
       margin-top: 20px;
@@ -222,7 +220,7 @@
     margin-top: 40px;
     padding-top: 1.8%;
 
-    @include size(100%, 154px);
+    @include size(570px, 154px);
 
     &::placeholder {
       font-family: "PT Mono", "Arial", monospace;
@@ -260,18 +258,18 @@
   }
 
   button {
-    @include size(47.35%, 45px);
+    @include size(270px, 45px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
     @include btn-reset;
-    margin-top: 7.4%;
+    margin-top: 42.15px;
     padding: 5px;
     font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: 700;
-    font-size: 0.73vw;
+    font-size: 14px;
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.05em;

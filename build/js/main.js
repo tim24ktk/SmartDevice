@@ -127,7 +127,7 @@
 
   if (feedbackForm) {
     feedbackForm.addEventListener(`submit`, (evt) => {
-      if (!firstName.value || !yourPhone.value || !yourQuestion.value) {
+      if (!firstName.value || !yourPhone.value) {
         evt.preventDefault();
       } else {
         setItem(firstName, yourPhone, yourQuestion);
@@ -137,7 +137,7 @@
 
   if (popupFeedback) {
     popupFeedback.addEventListener(`submit`, (evt) => {
-      if (!popupName.value || !popupPhone.value || !popupQuestion.value) {
+      if (!popupName.value || !popupPhone.value) {
         evt.preventDefault();
       } else {
         setItem(popupName, popupPhone, popupQuestion);
