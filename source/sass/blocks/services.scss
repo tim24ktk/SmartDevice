@@ -36,9 +36,10 @@
   }
 
   @media (max-width: $max-mobile-width) {
+    align-self: flex-start;
     margin-top: 49px;
     margin-right: 0;
-    margin-left: 10px;
+    margin-left: 17px;
     width: 280px;
     font-size: 28px;
     line-height: 39px;

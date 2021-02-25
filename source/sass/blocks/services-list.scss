@@ -13,6 +13,7 @@
 
   @media (max-width: $max-mobile-width) {
     margin-top: 2px;
+    width: 95.5%;
   }
 }
 
@@ -42,7 +43,7 @@
     margin-top: 41px;
     margin-left: 0;
 
-    @include size(290px, 256px);
+    @include size(100%, 80vw);
   }
 }
 
@@ -54,7 +55,7 @@
   @media (max-width: $max-mobile-width) {
     margin-top: 41px;
 
-    @include size(290px, 256px);
+    @include size(100%, 80vw);
   }
 }
 
@@ -84,7 +85,7 @@
   }
 
   @media (max-width: $max-mobile-width) {
-    height: 256px;
+    height: 80vw;
   }
 }
 
@@ -128,6 +129,9 @@
   @media (max-width: $max-mobile-width) {
     margin-top: 20px;
     margin-left: 35px;
+    width: 52%;
+    font-size: 6.2vw;
+    line-height: 9.2vw;
 
     &--third {
       margin-top: 29px;
