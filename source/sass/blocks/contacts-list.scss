@@ -5,17 +5,18 @@
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  align-items: center;
   width: 62.3%;
 
   @media (max-width: $max-tablet-width) {
-    margin-top: 12px;
+    margin-top: 10px;
     margin-right: 5px;
     width: 93px;
     justify-content: space-between;
   }
 
   @media (max-width: $max-mobile-width) {
-    margin-top: 2px;
+    margin-top: 1px;
     width: 87px;
   }
 }
