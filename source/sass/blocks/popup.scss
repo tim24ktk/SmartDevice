@@ -208,7 +208,7 @@
   input[type="checkbox"] + label::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 0;
 
     @include size(16px, 16px);
@@ -220,5 +220,16 @@
   input[type="checkbox"]:hover + label::before {
     cursor: pointer;
     opacity: 0.5;
+  }
+
+  div {
+    display: flex;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 24px;
+    margin-right: -15px;
+    margin-left: 21px;
+    opacity: 0;
   }
 }

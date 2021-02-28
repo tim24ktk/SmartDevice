@@ -212,8 +212,10 @@
             <label class="visually-hidden" for="question">Введите ваш вопрос</label>
             <textarea name="question" id="question" placeholder="Ваш вопрос"></textarea>
             <button type="submit">Задать вопрос</button>
-            <input class="visually-hidden" type="checkbox" name="request-consent" id="request-consent" checked="" required="">
-            <label for="request-consent">Я согласен на обработку<br>  персональных данных</label>
+            <div>
+              <input type="checkbox" name="request-consent" id="request-consent" checked="" required="">
+              <label for="request-consent">Я согласен на обработку<br>  персональных данных</label>
+            </div>
           </form>
         </div>
       </div>
@@ -319,8 +321,10 @@
         <label class="visually-hidden" for="popup-question">Введите ваш вопрос</label>
         <textarea name="popup-question" id="popup-question" placeholder="Ваш вопрос"></textarea>
         <button type="submit">Отправить</button>
-        <input class="visually-hidden" type="checkbox" name="request-consent" id="request" checked="" required="">
-        <label for="request">Я согласен на обработку  персональных данных</label>
+        <div>
+          <input type="checkbox" name="request-consent" id="request" checked="" required="">
+          <label for="request">Я согласен на обработку  персональных данных</label>
+        </div>
       </form>
       <button class="popup__close" type="button">
         <span class="visually-hidden">Закрыть</span>
