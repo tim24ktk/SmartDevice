@@ -8,6 +8,14 @@
   background-position: 24.8% 41.98%, 14% -3.2vw, 100.05% 108.95%, 99.2% 10%;
   background-size: 26.55%, 35%, 17.9%, 13.8%;
 
+  @media (min-width: $intermediate-width) and (max-width: $middle-breakpoint) {
+    background-position: 11.8% 41.98%, 0 -1.2vw, 100.05% 108.95%, 99.2% 10%;
+  }
+
+  @media (min-width: $desktop-width) and (max-width: $intermediate-width) {
+    background-position: -4% 41.98%, -15% 2.8vw, 100.05% 108.95%, 99.2% 10%;
+  }
+
   @media (max-width: $max-tablet-width) {
     padding-bottom: 103px;
     background-image: none;
@@ -175,7 +183,7 @@
   input[type="text"],
   input[type="tel"],
   textarea {
-    color: $logo-color;
+    color: $white;
     padding: 10px;
     padding-left: 16px;
     background-color: $input-background;
